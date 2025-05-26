@@ -1,4 +1,4 @@
-# 🛍️ ZeeCo – Modern E-Commerce Store (React + Vite)
+# 🛍️ ZC Online Shop. – Modern E-Commerce Store (React + Vite)
 
 **Live Demo:** [https://zico-jsfw.netlify.app](https://zico-jsfw.netlify.app)
 

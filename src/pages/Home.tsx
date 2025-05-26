@@ -56,7 +56,7 @@ function Home() {
     }
   });
 
-
+  const discounted = sortedProducts.filter((p) => p.discountedPrice < p.price);
   const popular = sortedProducts.filter((p) => p.rating >= 4);
   const latest = sortedProducts.slice(-4);
 
