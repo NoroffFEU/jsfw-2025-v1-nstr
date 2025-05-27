@@ -1,105 +1,120 @@
-# 🛍️ ZC Online Shop. – Modern E-Commerce Store (React + Vite)
+# ZeeCo – E-Commerce Store
 
-**Live Demo:** [https://zico-jsfw.netlify.app](https://zico-jsfw.netlify.app)
+![Desktop Screenshot](src/assets/ZCdesktop.png)
+![Mobile Screenshot](src/assets/ZCmobile.png)
 
-ZeeCo is a responsive and performant e-commerce web app built using React, TypeScript, and Vite. The platform integrates with a live API to showcase products, manage a shopping cart, process checkout, and handle customer inquiries via a contact form.
+## Overview
 
----
+ZeeCo is a fully functional and responsive online store built with **React**, **Vite**, **TypeScript**, **Zustand**, and **Tailwind CSS**. It allows users to browse products, manage their cart, complete a checkout process, and get in touch through a contact form. Product data is fetched from the **Noroff API**, and the layout is designed to work well across all screen sizes.
 
-## 🚀 Features
-
-- 🔍 Product browsing with real-time search and category filtering
-- 💸 Discount display and price formatting
-- 🛒 Cart with quantity management and total calculation
-- ✅ Checkout confirmation and state reset
-- 📬 Contact form with TypeScript validation and toast feedback
-- 📱 Mobile-first responsive design
-- ⚡ Built for speed and deployed to Netlify
+> 🔗 Live site: [https://zico-jsfw.netlify.app](https://zico-jsfw.netlify.app)
 
 ---
 
-## 🧰 Tech Stack
+## Key Features
 
-- **React** (with Hooks and Router)
-- **TypeScript**
-- **Vite** for blazing fast dev/build
-- **Tailwind CSS** for styling
-- **Swiper.js** for product sliders
-- **React Toasts** for feedback
-- **Netlify** for hosting
-
----
-
-## 📦 Getting Started
-
-Install dependencies and run the app locally:
-
-```bash
-npm install
-npm run dev
-```
-
-Build for production:
-
-```bash
-npm run build
-```
+* **Homepage**: Browse all products, with search, sorting, and category filters.
+* **Product Page**: Detailed info including image, description, price, and reviews.
+* **Cart Page**: Add, remove, and adjust quantities. See total cost.
+* **Checkout Success Page**: Order confirmation and cart reset.
+* **Contact Page**: Validated form to send a message.
+* **Responsive Design**: Works on all screen sizes.
 
 ---
 
-## 🌐 API
+## Technologies Used
 
-All product data is sourced from the Noroff API:
+* **React** – UI library
+* **Vite** – Frontend build tool
+* **TypeScript** – Type-safe JavaScript
+* **Zustand** – State management (cart state)
+* **Tailwind CSS** – Utility-first styling
+* **React Router** – Client-side routing
+
+---
+
+## API
+
+All product data comes from:
 
 ```
 https://v2.api.noroff.dev/online-shop
 ```
 
----
-
-## 📝 Pages
-
-| Path          | Description                        |
-|---------------|------------------------------------|
-| `/`           | Homepage with filters and slider   |
-| `/product/:id`| Product details and Add to Cart    |
-| `/cart`       | Cart summary and checkout button   |
-| `/success`    | Checkout confirmation              |
-| `/contact`    | Contact form with validation       |
+You can fetch individual products by appending `/:id`.
 
 ---
 
-## 📬 Contact Form Rules
+## Pages
 
-- **Full name:** Minimum 3 characters
-- **Subject:** Minimum 3 characters
-- **Email:** Valid email format
-- **Message:** Minimum 10 characters
+### Homepage
+
+* Product grid
+* Search bar
+* Sort by price/name
+* Filter by category
+
+### Product Page
+
+* Title, image, price, description
+* Add to Cart button
+
+### Cart Page
+
+* All cart items
+* Quantity adjust, remove, total calculation
+* Checkout button
+
+### Checkout Success
+
+* Success message and cart reset
+* Link back to homepage
+
+### Contact
+
+* Form with:
+
+  * Full Name
+  * Subject
+  * Email
+  * Message
+* Validation and toast notification
 
 ---
 
-## 📁 Folder Structure
+## Installation
 
-```txt
-src/
-├── components/      # Reusable UI components
-├── features/        # Product, cart, toast logic
-├── pages/           # Route-based views
-├── styles/          # Tailwind + custom styles
-└── main.tsx         # Entry point
+To run locally:
+
+```bash
+git clone https://github.com/NoroffFEU/jsfw-2025-v1-nstr.git
+cd jsfw-2025-v1-nstr
+npm install
+npm run dev
 ```
 
----
-
-## ✅ Deployment
-
-The app is continuously deployed via **Netlify**:  
-🌍 [https://zico-jsfw.netlify.app](https://zico-jsfw.netlify.app)
+Then visit [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 🧼 Notes
+## State Management
 
-- Clean and readable code with TypeScript types
-- Minimal dependencies, fast performance
-- Mobile-first design principles applied
+This project uses **Zustand** for:
+
+* Managing cart state (add, remove, quantity)
+* Persisting data in localStorage
+
+---
+
+## Deployment
+
+Deployed on **Netlify**:
+🔗 [https://zico-jsfw.netlify.app](https://zico-jsfw.netlify.app)
+
+> ⚠️ Note: A `_redirects` file is included in `/public` to support React Router navigation.
+
+---
+
+## Conclusion
+
+This project was built as part of a JavaScript Frameworks course assignment. It demonstrates how to build a complete e-commerce frontend using modern tools like React, Zustand, and Tailwind — with clean code, responsive layout, and API integration.
